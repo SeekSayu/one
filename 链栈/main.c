@@ -7,31 +7,31 @@ typedef struct Linknode {
 	struct Linknode* next;
 }Stack,*LisStack;
 
-//ÉùÃ÷Ò»¸öÕ»
+//å£°æ˜Žä¸€ä¸ªæ ˆ
 LisStack testStack(){
 	LisStack L = (LisStack)malloc(sizeof(Stack));
 	return L;
 }
-//³õÊ¼»¯Õ»
+//åˆå§‹åŒ–æ ˆ
 void InitStack(LisStack L) {
 	L->next = NULL;
 }
 
-//ÅÐ¶ÏÕ»¿Õ
+//åˆ¤æ–­æ ˆç©º
 void StackEmpty(LisStack L) {
 	if (L->next == NULL) {
-		printf("¸ÃÕ»Îª¿Õ£¡\n\n");
+		printf("è¯¥æ ˆä¸ºç©ºï¼\n\n");
 	}
 	else {
-		printf("¸ÃÕ»²»Îª¿Õ£¡\n\n");
+		printf("è¯¥æ ˆä¸ä¸ºç©ºï¼\n\n");
 	}
 }
 
-//½øÕ»
+//è¿›æ ˆ
 bool Push(LisStack L, int x) {
 	LisStack S = (LisStack)malloc(sizeof(Stack));
 	if (S == NULL) {
-		printf("ÄÚ´æ²»×ã£¬·ÖÅä¿Õ¼äÊ§°Ü£¡\n\n");
+		printf("å†…å­˜ä¸è¶³ï¼Œåˆ†é…ç©ºé—´å¤±è´¥ï¼\n\n");
 		return false;
 	}
 	S->data = x;
@@ -41,27 +41,26 @@ bool Push(LisStack L, int x) {
 	return true;
 }
 
-
-//³öÕ»
+//å‡ºæ ˆ
 void Pop(LisStack L) {
 	if (L->next != NULL) {
-		printf("³öÕ»µÄÔªËØÊÇ%d\n\n", L->next->data);
+		printf("å‡ºæ ˆçš„å…ƒç´ æ˜¯%d\n\n", L->next->data);
 		LisStack S = L->next;
 		L->next = L->next->next;
 		free(S);
 	}
 	else
-		printf("¸ÃÕ»ÒÑ¿Õ!!!\n\n");
+		printf("è¯¥æ ˆå·²ç©º!!!\n\n");
 	return true;
 }
 
-//¶ÁÕ»¶¥
+//è¯»æ ˆé¡¶
 void GetTop(LisStack L) {
 	if (L->next != NULL) {
-		printf("Õ»¶¥µÄÔªËØÊÇ%d\n\n", L->next->data);
+		printf("æ ˆé¡¶çš„å…ƒç´ æ˜¯%d\n\n", L->next->data);
 	}
 	else
-		printf("¸ÃÕ»ÒÑ¿Õ!!!\n\n");
+		printf("è¯¥æ ˆå·²ç©º!!!\n\n");
 	return true;
 }
 
