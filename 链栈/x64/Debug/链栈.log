@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Project-C\C\链栈\main.c(55,13): warning C4098: “Pop”:“void”函数返回值
+C:\Project-C\C\链栈\main.c(65,13): warning C4098: “GetTop”:“void”函数返回值
+  链栈.vcxproj -> C:\Project-C\C\链栈\x64\Debug\链栈.exe
